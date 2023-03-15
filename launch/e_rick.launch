@@ -1,0 +1,11 @@
+<launch>
+    <node 
+        pkg="rosserial_python" name="arduino_rosserial" type="serial_node.py" args="_port:=/dev/ttyUSB0 _baud:=57600" output="screen" >
+    </node>
+    <node
+        pkg="e_rick" name="velocity_filter" type="velocity_filter.py" >
+    </node>
+    <node
+        pkg="e_rick" name="steer_yaw_controller" type="steer_yaw_controller.py" output="screen" >
+    </node>
+</launch>

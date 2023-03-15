@@ -1,0 +1,14 @@
+Header header
+
+std_msgs/Char serial_received
+int64 steer_encoder
+int64 speed_voltage
+int64 steer_pwm_engage
+int64 steer_pwm_disengage
+int64 steer_duration
+int64 front_b_pwm_engage
+int64 front_b_pwm_disengage
+int64 front_b_duration
+int64 rear_b_pwm_engage
+int64 rear_b_pwm_disengage
+int64 rear_b_duration

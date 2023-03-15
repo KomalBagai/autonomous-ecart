@@ -1,0 +1,13 @@
+<launch>
+    <arg name="joy_com" default="/dev/ttyUSB1"/>
+    <arg name="baud" default="9600" />
+    <param name="/joy_com" type="str" value="$(arg joy_com)" />
+    <param name="/baud" type="double" value="$(arg baud)" />
+    <param name="autorepeat_rate" value="1"/>
+    <node 
+        pkg="joy" name="joy_node" type="joy_node" > 
+    </node>
+    <node 
+        pkg="e_rick" name="control_node" type="erick_joy_ctrl.py" output="screen" >
+    </node>
+</launch>
